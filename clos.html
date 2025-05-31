@@ -1,0 +1,12 @@
+{% extends 'evaluation/base.html' %}
+{% block content %}
+<h2>CLOs</h2>
+<ul class="list-group">
+    {% for clo in clos %}
+    <li class="list-group-item">
+        <strong>{{ clo.description }}</strong><br>
+        Taxonomy Level: {{ clo.taxonomy_level }} | PLO: {{ clo.plo }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

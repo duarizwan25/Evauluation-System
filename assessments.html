@@ -1,0 +1,16 @@
+{% extends 'evaluation/base.html' %}
+{% block content %}
+<h2>Assessments</h2>
+<table class="table table-striped">
+    <thead><tr><th>Title</th><th>Total Marks</th><th>Weightage (%)</th></tr></thead>
+    <tbody>
+    {% for a in assessments %}
+    <tr>
+        <td>{{ a.title }}</td>
+        <td>{{ a.total_marks }}</td>
+        <td>{{ a.weightage }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

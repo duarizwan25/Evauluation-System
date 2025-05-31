@@ -1,0 +1,21 @@
+{% extends 'evaluation/base.html' %}
+{% block content %}
+<h2>Evaluations</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Student</th><th>Assessment</th><th>Rubric Level</th><th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for e in evaluations %}
+    <tr>
+        <td>{{ e.student.name }}</td>
+        <td>{{ e.assessment.title }}</td>
+        <td>Level {{ e.rubric_level.level_number }}</td>
+        <td>{{ e.obtained_marks }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
